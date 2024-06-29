@@ -2,6 +2,7 @@ import React from "react";
 import './Destaque.css';
 
 export default ({item}) => {
+    console.log(item);
 
       let firstDate = new Date(item.first_air_date);
 
@@ -26,7 +27,7 @@ export default ({item}) => {
                             </div>
                                 <div className="destaque--description">{item.overview}</div>
                                     <div className="destaque--buttons">
-                                        <a href={`/watch/${item.id}`} className="destaque--assistir">⊵Assistir</a>
+                                        <a href={`/watch/${item.id}`} className="destaque--assistir">⊵ Assistir</a>
                                         <a href={`/list/add/${item.id}`} className="destaque--addlista">+ Minha Lista</a>
                                     </div>
                                 <div className="destaque--genres"><strong>Gêneros:</strong>{genres.join(', ')}</div>
