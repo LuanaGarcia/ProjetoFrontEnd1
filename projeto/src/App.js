@@ -2,17 +2,18 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
-import Details from './components/Details';
+import Details from './components/Details/Details';
+import NotAvailable from './components/NotAvailable/NotAvailable';
 import "./App.css";
 
 const App = () => {
-  return React.createElement(
-    Routes,
-    null,
-    //Rotas para paginas
-    React.createElement(Route, { path: '/', element: React.createElement(Login) }),
-    React.createElement(Route, { path: '/home', element: React.createElement(Home) }),
-    React.createElement(Route, { path: '/details', element: React.createElement(Details) })
+  return (
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/details/:id" element={<Details />} />
+      <Route path="/not-available" element={<NotAvailable />} />
+    </Routes>
   );
 };
 

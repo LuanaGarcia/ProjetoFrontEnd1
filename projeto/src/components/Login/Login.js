@@ -1,4 +1,3 @@
-import { FaUser, FaLock } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Login.css";
@@ -59,8 +58,8 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!isButtonDisabled) {
-      alert("Bem-vindo!" + "\nDados registrados:" + "\nE-mail: " + userName + "\nSenha: " + password);
-      navigate('/home'); // Navega para a página Home após login bem-sucedido
+      alert("Login bem-sucedido! \nBem-vindo!");
+      navigate('/home'); // Navega para a página Home
     }
   };
 
@@ -68,34 +67,26 @@ const Login = () => {
     <div className='back'>
       <div className="container">
         <form onSubmit={handleSubmit}>
-          <h1>Acesse a plataforma</h1>
+          <h1>Entrar</h1>
           <div className="input-field">
-            <input type="email" placeholder="E-mail" onChange={handleEmailChange} value={userName}/>
-            <FaUser className="icon"/>
+            <input type="email" placeholder="Email ou número de celular" onChange={handleEmailChange} value={userName}/>
             {hasInteractedEmail && emailError && <p className="error-message">{emailError}</p>}
           </div>
           <div className="input-field">
             <input type="password" placeholder="Senha" onChange={handlePasswordChange} value={password}/>
-            <FaLock className="icon"/>
             {hasInteractedPassword && passwordError && <p className="error-message">{passwordError}</p>}
           </div>
-           
+          <button type="submit" disabled={isButtonDisabled}>Entrar</button>
           <div className="recall-forget">
             <label>
               <input type="checkbox" />
-              Lembre de mim
+              Lembre-se de mim
             </label>
             <a href="#">Esqueceu a senha?</a>
           </div>
-
-          <button type="submit" disabled={isButtonDisabled}>Entrar</button>
-
           <div className="signup-link">
-            <p>
-              Não tem uma conta? <a href="#">Registrar</a>
-            </p>
+            <p>Novo por aqui? <a href="#">Assine agora.</a></p>
           </div>
-
         </form>
       </div>
     </div>

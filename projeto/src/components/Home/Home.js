@@ -30,21 +30,20 @@ const Home = () => {
     loadAll();
   }, []);
 
-        useEffect(()=>{
-          const scrollListener = () => {
-            if(window.scrollY > 10) {
-              setBlackHeader(true);
-            } else{
-              setBlackHeader(false);
-            }
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 10) {
+        setBlackHeader(true);
+      } else {
+        setBlackHeader(false);
+      }
+    }
+    window.addEventListener('scroll', scrollListener);
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
 
-          }
-            window.addEventListener('scroll', scrollListener);
-            return() => {
-              window.removeEventListener('scroll', scrollListener);
-            }
-
-        },[]);
+  }, []);
 
   return (
     <div className='page'>
@@ -57,10 +56,9 @@ const Home = () => {
       </section>
 
       <footer>
-        <p>Trabalho Front-end 1 - Luana Grcia.</p>
-        <p>Direitos para Netiflix.</p>
-        <p> Dados coletados do site Themoviebd.org.</p>
-        <p></p>
+        <p>Trabalho Front-end 1 - Luana Garcia.</p>
+        <p>Direitos para Netflix.</p>
+        <p>Dados coletados do site Themoviebd.org.</p>
       </footer>
     </div>
   );

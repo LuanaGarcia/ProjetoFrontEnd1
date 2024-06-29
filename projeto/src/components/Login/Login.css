@@ -1,115 +1,113 @@
-.back{
+.back {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url("fundo.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
   background-position: center;
 }
 
-.container{
-  width: 450px;
-  background-color: rgba(5, 16, 89, 0.2);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(5, 16, 89, 0.2);
+.container {
+  width: 100%;
+  max-width: 450px;
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 40px;
   border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.container h1{
-  text-align: center;
-  font-size: 30px;
-  color: #041d5a;
-  text-shadow: #000b2c 1px 1px;
+.container h1 {
+  text-align: left;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
 }
 
-.container .input-field{
+.container .input-field {
   position: relative;
   width: 100%;
-  height: 50px;
-  margin: 30px auto;
+  margin: 20px 0;
 }
 
-.input-field input{
+.input-field input {
   width: 100%;
-  height: 100%;
-  background-color: transparent;
-  outline: none;
-  border: 2px solid rgb(31, 44, 77);
-  border-radius: 40px;
+  height: 50px;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 5px;
   font-size: 16px;
-  color: black;
-  padding: 20px 45px;
+  color: white;
+  padding: 0 15px;
 }
 
-.input-field input::placeholder{
-  color: #707085;
+.input-field input::placeholder {
+  color: #aaa;
 }
 
-.input-field .icon{
+.input-field .icon {
   position: absolute;
-  right: 25px;
+  right: 15px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 18px;
-  color: rgba(6, 9, 96, 0.25);
+  color: #aaa;
 }
 
-.container .recall-forget{
+.container .recall-forget {
   display: flex;
   justify-content: space-between;
   font-size: 14.5px;
-  margin: -3px 0 15px;
+  color: white;
+  margin: 15px 0;
 }
 
-.recall-forget label{
-  color: black;
+.recall-forget label {
+  display: flex;
+  align-items: center;
+  color: white;
 }
 
-.recall-forget input{
+.recall-forget input {
   margin-right: 5px;
 }
 
-.recall-forget a, .singup-link p a {
+.recall-forget a, .signup-link p a {
   text-decoration: none;
-  color: black;
-  
+  color: white;
 }
 
-.recall-forget a:hover, .singup-link p a:hover{
+.recall-forget a:hover, .signup-link p a:hover {
   text-decoration: underline;
-  color: #1b409e;
 }
 
-.container button{
+.container button {
   width: 100%;
   height: 50px;
-  background-color: #021c5d;
-  border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-color: transparent;
+  background-color: #e50914;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  font-weight: 600px;
-  color: aliceblue;
-  margin-bottom: 10px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
 }
 
-.container button:hover{
-  background-color: #1b409e;
-  color: gainsboro;
+.container button:hover {
+  background-color: #f40612;
 }
 
-.container .singup-link{
-  font-size: 15px;
+.container .signup-link {
+  font-size: 14px;
   text-align: center;
+  color: white;
   margin: 20px 0 10px;
 }
 
 .error-message {
-  color: rgb(173, 8, 8);
+  color: #e87c03;
   font-size: 12px;
   margin-top: 2px;
-  margin-left: 25px;
 }
+
