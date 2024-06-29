@@ -1,15 +1,23 @@
 import React from 'react';
 import './Catalogo.css';
 
-export default ({title, items}) => {
-  return(
-      <div>
-          <h2>{title}</h2>
-          <div className='catalogo--listarea'>
-              {items.results.length > 0 && items.results.map((item, key)=>(
-                  <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} />
-              ))}
-          </div>
+const Catalogo = ({ title, items }) => {
+  return (
+    <div className='catalogo'>
+      <h2>{title}</h2>
+      <div className='catalogo--listarea'>
+
+        <div className='catalogo--list'>
+            {items && items.results && items.results.length > 0 && items.results.map((item, key) => (
+                <div key={key} className='catalogo--item'>
+                    <img key={key} src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.title || item.name} />
+                </div>
+            ))}
+        </div>
+        
       </div>
-  )
+    </div>
+  );
 }
+
+export default Catalogo;

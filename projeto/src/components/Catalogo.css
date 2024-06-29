@@ -1,0 +1,32 @@
+.catalogo{
+  margin-bottom: 30px;
+}
+
+.catalogo h2{
+  margin: 0px 0px 0px 30px;
+}
+
+.catalogo--listarea{
+  overflow-x: hidden;
+  padding-left: 30px;
+}
+
+.catalogo--list{
+  width: 99999999px;
+}
+
+.catalogo--item{
+  display: inline-block;
+  width: 150px;
+  cursor: pointer;
+}
+
+.catalogo--item img{
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
+}
+
+.catalogo--item img:hover{
+  transform: scale(1);
+}
